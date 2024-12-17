@@ -1,7 +1,7 @@
-module.exports = (sequelize, DataTypes) => {
+module.exports = (sequelize, Sequelize) => {
     const User = sequelize.define('users', {
       firstName: {
-        type: DataTypes.STRING,
+        type: Sequelize.STRING,
         validate: {
           notEmpty: {
             args: true,
@@ -10,7 +10,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       },
       lastName: {
-        type: DataTypes.STRING,
+        type: Sequelize.STRING,
         validate: {
           notEmpty: {
             args: true,
@@ -19,7 +19,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       },
       email: {
-        type: DataTypes.STRING,
+        type: Sequelize.STRING,
         validate: {
           notEmpty: {
             args: true,

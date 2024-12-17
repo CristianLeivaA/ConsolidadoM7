@@ -1,4 +1,6 @@
-const db = {}
+const Sequelize = require('sequelize');
+const db = require('../models');
+const sequelize = require('../config/db.config');
 
 db.Sequelize = Sequelize
 db.sequelize = sequelize
@@ -17,5 +19,6 @@ db.bootcamps.belongsToMany(db.users, {
   as: "users",
   foreignKey: "bootcamp_id",
 });
+
 
 module.exports = db
